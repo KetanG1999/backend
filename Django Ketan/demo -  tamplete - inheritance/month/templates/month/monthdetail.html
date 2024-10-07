@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block titlepage %}
+{{ monthname }}
+{% endblock %}
+
+{% block content %}
+{% include "month/includes/header.html"%}
+<h1> month Detail</h1>
+<h2>{{ monthtext }}</h2>
+{% endblock%}
+        

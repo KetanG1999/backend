@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ monthname }}</title>
+    <link rel="stylesheet" href="{% static 'month/index.css' %}"/>
+</head>
+<body class="main_body">
+    <!-- <div class="navbar"> -->
+        <ul class="ul_list"> 
+            <li>
+            {% for mon in monthlist %}
+                <!-- <div class="list"> -->
+                    <!-- <a href="/month/{{ mon }}">{{mon}}</a> -->
+                    <a href="{% url 'month-name' mon %}">{{mon|title}}</a>
+                <!-- </div> -->
+            {% endfor %}
+            </li>
+        </ul>
+    <!-- </div>  -->
+</body>
+</html>
